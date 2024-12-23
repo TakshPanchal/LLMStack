@@ -140,7 +140,7 @@ class MessagesVisionProcessor(ApiProcessorInterface[MessagesVisionInput, Message
         )
 
         messages_to_send = (
-            [{"role": "system", "content": self._config.system_message}] + messages
+            [{"role": "system", "content": self._config.system_prompt}] + messages
             if self._config.system_prompt
             else messages
         )
