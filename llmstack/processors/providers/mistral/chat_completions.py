@@ -139,7 +139,7 @@ class MessagesProcessor(ApiProcessorInterface[MessagesInput, MessagesOutput, Mes
         messages = []
 
         if self._config.system_prompt:
-            messages.append({"role": "system", "content": self._config.system_message})
+            messages.append({"role": "system", "content": self._config.system_prompt})
 
         if self._chat_history:
             for message in self._chat_history:
